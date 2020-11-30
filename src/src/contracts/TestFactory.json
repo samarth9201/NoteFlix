@@ -1,0 +1,432 @@
+{
+  "contractName": "TestFactory",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract Factory",
+          "name": "_factory",
+          "type": "address"
+        }
+      ],
+      "name": "addUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Factory\",\"name\":\"_factory\",\"type\":\"address\"}],\"name\":\"addUser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/samarth/Blockchain/Dapps/music-stream/contracts/TestFactory.sol\":\"TestFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/samarth/Blockchain/Dapps/music-stream/contracts/Factory.sol\":{\"keccak256\":\"0xaeda02f15c5a5962d10f1d6296900e67b31011401c422b97ba07626f1170afbe\",\"urls\":[\"bzz-raw://404e917d4b4639d98a62b00e42f020e548f786d9e88f4da1f73773e307a19512\",\"dweb:/ipfs/QmRY5WhXSr8SJEbdMx6yam4KJHZDd1r4P3kxsKZ32fUDZn\"]},\"/home/samarth/Blockchain/Dapps/music-stream/contracts/MusicContract.sol\":{\"keccak256\":\"0x662838df9cd655d8deffb7325fccaab237c1db2f1049925c881bf79817f14ccc\",\"urls\":[\"bzz-raw://fc26975b5f678033f138113f3564315ad8d6c63d3d30b04ab9426157e0c5dfa5\",\"dweb:/ipfs/QmULmejQLGc91T1jF41eRWLWjCqep3TVUpeQFq2RbEC7ZF\"]},\"/home/samarth/Blockchain/Dapps/music-stream/contracts/TestFactory.sol\":{\"keccak256\":\"0x77ed3f0f46212db77f9c7a46fa93b872e9d989669f97274c87997855c3296ed8\",\"urls\":[\"bzz-raw://964a9c355ba14e5e75e6420c7b512e82881550d19b541bdcaeba4dc2a80060e7\",\"dweb:/ipfs/QmZ1n2wuJbUpJeM5SKa5NMxHtq5wzgey7Ri7eWbwhdy6A1\"]},\"/home/samarth/Blockchain/Dapps/music-stream/contracts/UserContract.sol\":{\"keccak256\":\"0x9e45d7be00a3ff44da273d16c9836f605ffad0d65d3883b1e0b4688e8e818813\",\"urls\":[\"bzz-raw://09d40357d46abe05c8b6a36d071179196324a4ba24568f3366fffcdbb1207c02\",\"dweb:/ipfs/QmQTikNzsLR9uBXWdGnHbJqruf5KncNH3thycqjgvSZEeA\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610117806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063421b2d8b14602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b60408051630c5c13ad60e11b8152602060048201819052600c60248301526b5465737420466163746f727960a01b604483015291516001600160a01b038416926318b8275a92606480820193918290030181600087803b15801560b457600080fd5b505af115801560c7573d6000803e3d6000fd5b505050506040513d602081101560dc57600080fd5b50505056fea2646970667358221220a03a28ada6f14970d73c7d1086664adfa65c0da1f5719ac66c78e2de42bbcd6264736f6c63430006000033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063421b2d8b14602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b60408051630c5c13ad60e11b8152602060048201819052600c60248301526b5465737420466163746f727960a01b604483015291516001600160a01b038416926318b8275a92606480820193918290030181600087803b15801560b457600080fd5b505af115801560c7573d6000803e3d6000fd5b505050506040513d602081101560dc57600080fd5b50505056fea2646970667358221220a03a28ada6f14970d73c7d1086664adfa65c0da1f5719ac66c78e2de42bbcd6264736f6c63430006000033",
+  "sourceMap": "60:121:3:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:121:3;;;;;;;",
+  "deployedSourceMap": "60:121:3:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:121:3;;;;;;;;;;;;;;;;;;;87:92;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;87:92:3;-1:-1:-1;;;;;87:92:3;;:::i;:::-;;;140:32;;;-1:-1:-1;;;140:32:3;;;;;;;;;;;;;;-1:-1:-1;;;140:32:3;;;;;;-1:-1:-1;;;;;140:16:3;;;;;:32;;;;;;;;;;;;:16;:32;;;5:2:-1;;;;30:1;27;20:12;5:2;140:32:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;140:32:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;87:92:3:o",
+  "source": "pragma solidity >= 0.4.0 < 0.7.0;\n\nimport './Factory.sol';\n\ncontract TestFactory{\n\n    function addUser(Factory _factory) public {\n\n        _factory.addUser(\"Test Factory\");\n    }\n}",
+  "sourcePath": "/home/samarth/Blockchain/Dapps/music-stream/contracts/TestFactory.sol",
+  "ast": {
+    "absolutePath": "/home/samarth/Blockchain/Dapps/music-stream/contracts/TestFactory.sol",
+    "exportedSymbols": {
+      "TestFactory": [
+        389
+      ]
+    },
+    "id": 390,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 375,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:3"
+      },
+      {
+        "absolutePath": "/home/samarth/Blockchain/Dapps/music-stream/contracts/Factory.sol",
+        "file": "./Factory.sol",
+        "id": 376,
+        "nodeType": "ImportDirective",
+        "scope": 390,
+        "sourceUnit": 127,
+        "src": "35:23:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 389,
+        "linearizedBaseContracts": [
+          389
+        ],
+        "name": "TestFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 387,
+              "nodeType": "Block",
+              "src": "129:50:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5465737420466163746f7279",
+                        "id": 384,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "157:14:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_932ef03fb15dfd12ff6bce61f6f1084221bdaac19b3f2a0c561b1a307606d949",
+                          "typeString": "literal_string \"Test Factory\""
+                        },
+                        "value": "Test Factory"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_932ef03fb15dfd12ff6bce61f6f1084221bdaac19b3f2a0c561b1a307606d949",
+                          "typeString": "literal_string \"Test Factory\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 381,
+                        "name": "_factory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 378,
+                        "src": "140:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Factory_$126",
+                          "typeString": "contract Factory"
+                        }
+                      },
+                      "id": 383,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addUser",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 104,
+                      "src": "140:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$returns$_t_contract$_UserContract_$510_$",
+                        "typeString": "function (string memory) external returns (contract UserContract)"
+                      }
+                    },
+                    "id": 385,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "140:32:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UserContract_$510",
+                      "typeString": "contract UserContract"
+                    }
+                  },
+                  "id": 386,
+                  "nodeType": "ExpressionStatement",
+                  "src": "140:32:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "421b2d8b",
+            "id": 388,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addUser",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 378,
+                  "name": "_factory",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 388,
+                  "src": "104:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Factory_$126",
+                    "typeString": "contract Factory"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 377,
+                    "name": "Factory",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 126,
+                    "src": "104:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Factory_$126",
+                      "typeString": "contract Factory"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:18:3"
+            },
+            "returnParameters": {
+              "id": 380,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:0:3"
+            },
+            "scope": 389,
+            "src": "87:92:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 390,
+        "src": "60:121:3"
+      }
+    ],
+    "src": "0:181:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/samarth/Blockchain/Dapps/music-stream/contracts/TestFactory.sol",
+    "exportedSymbols": {
+      "TestFactory": [
+        389
+      ]
+    },
+    "id": 390,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 375,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:3"
+      },
+      {
+        "absolutePath": "/home/samarth/Blockchain/Dapps/music-stream/contracts/Factory.sol",
+        "file": "./Factory.sol",
+        "id": 376,
+        "nodeType": "ImportDirective",
+        "scope": 390,
+        "sourceUnit": 127,
+        "src": "35:23:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 389,
+        "linearizedBaseContracts": [
+          389
+        ],
+        "name": "TestFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 387,
+              "nodeType": "Block",
+              "src": "129:50:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5465737420466163746f7279",
+                        "id": 384,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "157:14:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_932ef03fb15dfd12ff6bce61f6f1084221bdaac19b3f2a0c561b1a307606d949",
+                          "typeString": "literal_string \"Test Factory\""
+                        },
+                        "value": "Test Factory"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_932ef03fb15dfd12ff6bce61f6f1084221bdaac19b3f2a0c561b1a307606d949",
+                          "typeString": "literal_string \"Test Factory\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 381,
+                        "name": "_factory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 378,
+                        "src": "140:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Factory_$126",
+                          "typeString": "contract Factory"
+                        }
+                      },
+                      "id": 383,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addUser",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 104,
+                      "src": "140:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$returns$_t_contract$_UserContract_$510_$",
+                        "typeString": "function (string memory) external returns (contract UserContract)"
+                      }
+                    },
+                    "id": 385,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "140:32:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UserContract_$510",
+                      "typeString": "contract UserContract"
+                    }
+                  },
+                  "id": 386,
+                  "nodeType": "ExpressionStatement",
+                  "src": "140:32:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "421b2d8b",
+            "id": 388,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addUser",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 378,
+                  "name": "_factory",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 388,
+                  "src": "104:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Factory_$126",
+                    "typeString": "contract Factory"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 377,
+                    "name": "Factory",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 126,
+                    "src": "104:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Factory_$126",
+                      "typeString": "contract Factory"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:18:3"
+            },
+            "returnParameters": {
+              "id": 380,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:0:3"
+            },
+            "scope": 389,
+            "src": "87:92:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 390,
+        "src": "60:121:3"
+      }
+    ],
+    "src": "0:181:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.0+commit.26b70077.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-11-30T14:38:09.051Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

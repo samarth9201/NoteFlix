@@ -1,0 +1,232 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract MusicContract",
+						"name": "_musicContract",
+						"type": "address"
+					}
+				],
+				"name": "addMusicToLibrary",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "addUser",
+				"outputs": [
+					{
+						"internalType": "contract UserContract",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLibrary",
+				"outputs": [
+					{
+						"internalType": "contract MusicContract[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "isRegistered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "contract UserContract",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "userNames",
+				"outputs": [
+					{
+						"internalType": "contract UserContract",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "contract UserContract",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Samarth Bhadane",
+			"kind": "dev",
+			"methods": {
+				"addMusicToLibrary(address)": {
+					"params": {
+						"_musicContract": "is instance of MusicContract which is to be added."
+					}
+				},
+				"addUser(string)": {
+					"details": "This function will add a new user. The transaction will be revoked if a Smart Contract invokes this function.      After successful execution, the value of users[msg.sender] is set to true which shows successful registration      of user. If an user who has already registered invokes this function, the transaction will be revoked.",
+					"params": {
+						"_name": "is string. This name is assigned to UserContract."
+					},
+					"returns": {
+						"_0": "Returns address of deployed UserContract."
+					}
+				},
+				"getLibrary()": {
+					"returns": {
+						"_0": "Returns the array musicLibrary[] which is collection musics."
+					}
+				},
+				"isRegistered(address)": {
+					"details": "This function will return true if an address has registered using addUser(), else return false.",
+					"params": {
+						"_address": "is for which check is to be done."
+					},
+					"returns": {
+						"_0": "boolean value (true or false)."
+					}
+				}
+			},
+			"title": "Factory Contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addMusicToLibrary(address)": {
+					"notice": "This function adds address to musicLibrary[] on addition of new music by user."
+				},
+				"addUser(string)": {
+					"notice": "This function is used to Register new user."
+				},
+				"isRegistered(address)": {
+					"notice": "Check if an address provided has Registered. If yes, return true, else false."
+				}
+			},
+			"notice": "This contract is used as a factory for user contract and for storing address of all music contracts deployed.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/Factory.sol": "Factory"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/GSN/Context.sol": {
+			"keccak256": "0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a",
+				"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3",
+				"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba"
+			]
+		},
+		"@openzeppelin/contracts/math/SafeMath.sol": {
+			"keccak256": "0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5",
+				"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV"
+			]
+		},
+		"localhost/contracts/Factory.sol": {
+			"keccak256": "0xb7228a3c578dd5322ffc96ee9636d2e334d1a2da6e689dba2844f98280ff2721",
+			"urls": [
+				"bzz-raw://6f319d30b1ff5b4239d571e2cb4dd7ac9969ed66cff29f2310add50cb08d08db",
+				"dweb:/ipfs/QmWoVgSjFw6Hc1PQJLJEYGXbY7ymyV3DLk44MguwX3VDnc"
+			]
+		},
+		"localhost/contracts/MusicContract.sol": {
+			"keccak256": "0xb4b7169bb5dcbc48b2ae54c7f4feca560074d3fd7a16747bcfa31baa3d52bb35",
+			"urls": [
+				"bzz-raw://2c65a2441a02a7ef8bb2d546c45505950af32bcdb2db8a9ba221479ef59253b7",
+				"dweb:/ipfs/QmQRSk81GMVxg4XxY1od4JmJZN2KW6SqJHcS8AXtXWzpUf"
+			]
+		},
+		"localhost/contracts/UserContract.sol": {
+			"keccak256": "0xf2a6687c5e8e4aab02ad2c3b17c1dcb9aaa3702eda86a29a8847d9afe1f80cea",
+			"urls": [
+				"bzz-raw://e40a934a65b094b1375b796dc4d0c58d9c7b2df44cf9625c39af0cec27ad07a3",
+				"dweb:/ipfs/QmYeXAKZNTqeRKZqqQfJUpecVdPXCbbnae354TeJ2Anqp4"
+			]
+		}
+	},
+	"version": 1
+}

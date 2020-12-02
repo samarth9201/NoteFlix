@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.6.6+commit.6c089d02"
+		"version": "0.6.12+commit.27d51765"
 	},
 	"language": "Solidity",
 	"output": {
@@ -91,6 +91,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getOwnedMusic",
+				"outputs": [
+					{
+						"internalType": "contract MusicContract[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
@@ -134,23 +147,63 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract MusicContract",
+						"name": "_contract",
+						"type": "address"
+					}
+				],
+				"name": "updateOwnedMusic",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
+			"author": "Samarth Bhadane",
+			"kind": "dev",
 			"methods": {
+				"addMusic(string,string,uint256)": {
+					"details": "only Owner must call this function."
+				},
+				"constructor": {
+					"params": {
+						"_name": "of user.",
+						"_owner": "address of owner of Contract."
+					}
+				},
 				"owner()": {
 					"details": "Returns the address of the current owner."
 				},
 				"renounceOwnership()": {
-					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
 				},
 				"transferOwnership(address)": {
 					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
 				}
-			}
+			},
+			"title": "UserContract",
+			"version": 1
 		},
 		"userdoc": {
-			"methods": {}
+			"kind": "user",
+			"methods": {
+				"addMusic(string,string,uint256)": {
+					"notice": "The following function is used by owner to add music i.e deploy new music contract."
+				},
+				"constructor": "constructor for UserContract.",
+				"getMyMusic()": {
+					"notice": "The following function is used to get music added by user."
+				},
+				"getOwnedMusic()": {
+					"notice": "The following function is used to get music owned by user."
+				}
+			},
+			"notice": "UserContract contains user data, his name, songs added by user and songs which the user bought.",
+			"version": 1
 		}
 	},
 	"settings": {
@@ -171,6 +224,7 @@
 	"sources": {
 		"@openzeppelin/contracts/GSN/Context.sol": {
 			"keccak256": "0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183",
+			"license": "MIT",
 			"urls": [
 				"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a",
 				"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP"
@@ -178,6 +232,7 @@
 		},
 		"@openzeppelin/contracts/access/Ownable.sol": {
 			"keccak256": "0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc",
+			"license": "MIT",
 			"urls": [
 				"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3",
 				"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba"
@@ -185,30 +240,31 @@
 		},
 		"@openzeppelin/contracts/math/SafeMath.sol": {
 			"keccak256": "0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806",
+			"license": "MIT",
 			"urls": [
 				"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5",
 				"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV"
 			]
 		},
 		"localhost/contracts/Factory.sol": {
-			"keccak256": "0xffb07b811c78184fe5d59849086b1e67c4c118a3687331b8121137415e03269d",
+			"keccak256": "0x187d148cdcf46492b2fc67663b898e43ed12b5609ab09587005909f6b4136021",
 			"urls": [
-				"bzz-raw://cd74a18f5cf1ba08defbeb9e0feb8edcafb6d51b01ed7f9727f0f96a2da16d8a",
-				"dweb:/ipfs/QmVALb5sWDQ6Fu94ppSHcH8wYHNFdUtPLs2BJHzi7KY4Vd"
+				"bzz-raw://bdcef5ae5dca93d176bcc908d4e9a6e2172f299917d66ca4f72cbc2df87e3da8",
+				"dweb:/ipfs/QmYUUreT7dnpK7c17iyvtv288KwcYJsSxx63BaDsqRyorK"
 			]
 		},
 		"localhost/contracts/MusicContract.sol": {
-			"keccak256": "0xbf49e07638933ef8787988532a8c0b34e1de73259fb98f43b07993bcd259e9d2",
+			"keccak256": "0xb4b7169bb5dcbc48b2ae54c7f4feca560074d3fd7a16747bcfa31baa3d52bb35",
 			"urls": [
-				"bzz-raw://ab964a19ad43ef1716ca7a62e3d22aaabbf0eae914a7690e7ea2f4ca4f87d247",
-				"dweb:/ipfs/QmU3VdbY6kv1VcdCqpNHM2Dn3W99jjhLo3wmwbDpYxeRVb"
+				"bzz-raw://2c65a2441a02a7ef8bb2d546c45505950af32bcdb2db8a9ba221479ef59253b7",
+				"dweb:/ipfs/QmQRSk81GMVxg4XxY1od4JmJZN2KW6SqJHcS8AXtXWzpUf"
 			]
 		},
 		"localhost/contracts/UserContract.sol": {
-			"keccak256": "0xc856c42a362a4488f2daa59b91bba4238d56fea6691e629aed37109a9a6faa77",
+			"keccak256": "0xf2a6687c5e8e4aab02ad2c3b17c1dcb9aaa3702eda86a29a8847d9afe1f80cea",
 			"urls": [
-				"bzz-raw://511391049a580fedae3b719cfbea70c8428bd33e2773c3e010c812bff67fd06d",
-				"dweb:/ipfs/QmPJQDVbAj6HizJGhpGrtzQVVDc4Ty2hFXkTRVXBSZ6U23"
+				"bzz-raw://e40a934a65b094b1375b796dc4d0c58d9c7b2df44cf9625c39af0cec27ad07a3",
+				"dweb:/ipfs/QmYeXAKZNTqeRKZqqQfJUpecVdPXCbbnae354TeJ2Anqp4"
 			]
 		}
 	},

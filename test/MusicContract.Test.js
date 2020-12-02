@@ -90,7 +90,7 @@ contract("Music", accounts => {
     it("Should allow owner to withdraw balance from musicContract", async () => {
 
         for (var i = 1; i <= 5; i++) {
-            await factoryContract.addUser("Name", { from: accounts[i] })
+            await factoryContract.addUser(`Name${i}`, { from: accounts[i] })
             await musicContract.buyMusic({ from: accounts[i], value: Price })
         }
 

@@ -4,7 +4,7 @@ import PauseIcon from '@material-ui/icons/Pause';
 import React, { useState } from 'react'
 import defaultImage from '../static/Song.png'
 
-interface songDetails{
+interface songDetails {
     url: string,
     artist: string,
     name: string
@@ -58,6 +58,11 @@ const useStyles = makeStyles(theme => ({
     slider: {
         marginRight: "15px",
         marginLeft: "15px"
+    },
+    appBar: {
+        top: 'auto',
+        bottom: 0,
+        height: 150
     }
 }))
 
@@ -67,7 +72,7 @@ const MusicPlayer = (props: PlayerProps) => {
     const [play, setPlay] = useState(false)
     const [duration, setDuration] = useState(0)
     const audioRef = React.useRef<HTMLAudioElement>(null)
-    
+
 
     const getTime = (time: number): string => {
         if (!isNaN(time)) {
@@ -145,7 +150,7 @@ const MusicPlayer = (props: PlayerProps) => {
                 </div>
                 <div className={classes.sliderContainer}>
                     {getTime(duration)}
-                    <Slider max={audioRef.current? audioRef.current.duration : 100} className={classes.slider} value={duration} onChange={handleChange} aria-labelledby="continuous-slider" />
+                    <Slider max={audioRef.current ? audioRef.current.duration : 100} className={classes.slider} value={duration} onChange={handleChange} aria-labelledby="continuous-slider" />
                     {
                         (audioRef.current) ? <span>{getTime(audioRef.current.duration)}</span> : <span>{getTime(0)}</span>
                     }

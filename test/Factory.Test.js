@@ -120,4 +120,18 @@ contract("Factory", accounts => {
             assert(error != null, "Should not be null")
         }
     })
+
+    it("Should revert if Name is already in use", async() =>{
+        try{
+            const name = "Name"
+            const factoryContract = await Factory.new();
+
+            await factoryContract.addUser("Name", {from: accounts[0]})
+            await factoryContract.addUser("Name", {from: accounts[1]})
+            throw null
+        }
+        catch(error){
+            assert(error, "Error is null")
+        }
+    })
 });

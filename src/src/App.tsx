@@ -5,6 +5,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import QueueIcon from '@material-ui/icons/Queue';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import clsx from 'clsx'
 import React, { useState } from 'react'
 import Home from './Contents/Home';
@@ -14,6 +15,7 @@ import AddMusic from './Contents/AddMusic';
 import MusicPlayer from './Contents/MusicPlayer';
 import Web3 from 'web3';
 import connectToWallet from './Contents/loadWeb3';
+import SearchUser from './Contents/SearchUser';
 
 const Factory = require('./contracts/Factory.json')
 const UserContract = require('./contracts/UserContract.json')
@@ -49,12 +51,16 @@ const DrawerData = [
     {
         text: "Add Music",
         IconComponent: <QueueIcon />
+    },
+    {
+        text: "Search User",
+        IconComponent: <AccountCircleIcon/>
     }
 ]
 
 const useStyles = makeStyles(theme => ({
     root: {
-        display: 'flex'
+        display: 'flex',
     },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
@@ -110,7 +116,8 @@ const useStyles = makeStyles(theme => ({
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
-        height: "100vh"
+        height: "100vh",
+        marginBottom: "200px"
     },
     active: {
         borderRight: `5px solid ${theme.palette.primary.main}`,
@@ -163,6 +170,8 @@ const App = () => {
                 return <AddMusic userContract={userContract} web3={web3}/>
             case "My Music":
                 return <MyMusic factory={factory} web3={web3} setSongData={setSongData}/>
+            case "Search User":
+                return <SearchUser factory={factory} web3={web3} setSongData={setSongData}/>
             default:
                 return <div>Undefined</div>
         }

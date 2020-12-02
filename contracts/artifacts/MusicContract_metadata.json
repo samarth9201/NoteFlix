@@ -161,8 +161,23 @@
 			}
 		],
 		"devdoc": {
+			"author": "Samarth Bhadane",
 			"kind": "dev",
 			"methods": {
+				"buyMusic()": {
+					"details": "The value sent by user should be >= price of music. If the value sent > price,      Appropriate value must be returned to user.      An User must be Registered through factory contract in order to call this function."
+				},
+				"constructor": {
+					"params": {
+						"_factory": "instance of Factory contract.",
+						"_hash": "IPFS Hash of the song.",
+						"_name": "name of the song.",
+						"_owner": "address of owner of the contract."
+					}
+				},
+				"getHash()": {
+					"details": "In order to get hash, the user must buy the music."
+				},
 				"owner()": {
 					"details": "Returns the address of the current owner."
 				},
@@ -173,11 +188,27 @@
 					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
 				}
 			},
+			"title": "Music contract",
 			"version": 1
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"buyMusic()": {
+					"notice": "This is the function where a Registered User can buy music."
+				},
+				"constructor": "constructor for Music Contract",
+				"getData()": {
+					"notice": "The following function is used to get Data i.e name and price of song."
+				},
+				"getHash()": {
+					"notice": "The following function is used to get hash of song."
+				},
+				"withdraw()": {
+					"notice": "The following function is used by owner to withdraw funds from smart contract"
+				}
+			},
+			"notice": "This is a contract to interact with song details.",
 			"version": 1
 		}
 	},
@@ -222,24 +253,24 @@
 			]
 		},
 		"localhost/contracts/Factory.sol": {
-			"keccak256": "0xaeda02f15c5a5962d10f1d6296900e67b31011401c422b97ba07626f1170afbe",
+			"keccak256": "0x187d148cdcf46492b2fc67663b898e43ed12b5609ab09587005909f6b4136021",
 			"urls": [
-				"bzz-raw://404e917d4b4639d98a62b00e42f020e548f786d9e88f4da1f73773e307a19512",
-				"dweb:/ipfs/QmRY5WhXSr8SJEbdMx6yam4KJHZDd1r4P3kxsKZ32fUDZn"
+				"bzz-raw://bdcef5ae5dca93d176bcc908d4e9a6e2172f299917d66ca4f72cbc2df87e3da8",
+				"dweb:/ipfs/QmYUUreT7dnpK7c17iyvtv288KwcYJsSxx63BaDsqRyorK"
 			]
 		},
 		"localhost/contracts/MusicContract.sol": {
-			"keccak256": "0x662838df9cd655d8deffb7325fccaab237c1db2f1049925c881bf79817f14ccc",
+			"keccak256": "0xb4b7169bb5dcbc48b2ae54c7f4feca560074d3fd7a16747bcfa31baa3d52bb35",
 			"urls": [
-				"bzz-raw://fc26975b5f678033f138113f3564315ad8d6c63d3d30b04ab9426157e0c5dfa5",
-				"dweb:/ipfs/QmULmejQLGc91T1jF41eRWLWjCqep3TVUpeQFq2RbEC7ZF"
+				"bzz-raw://2c65a2441a02a7ef8bb2d546c45505950af32bcdb2db8a9ba221479ef59253b7",
+				"dweb:/ipfs/QmQRSk81GMVxg4XxY1od4JmJZN2KW6SqJHcS8AXtXWzpUf"
 			]
 		},
 		"localhost/contracts/UserContract.sol": {
-			"keccak256": "0x69d4f71a205c6d220c69e976b164eb33bfbeef092a7500f79c1e29d270a5ac5b",
+			"keccak256": "0x9e45d7be00a3ff44da273d16c9836f605ffad0d65d3883b1e0b4688e8e818813",
 			"urls": [
-				"bzz-raw://aa755a63f50a1499e5609c680d11149bd9922988ae3f0868477cb3d147149ec9",
-				"dweb:/ipfs/Qma16CaLn2gikJWaMs9BpTCBwkb5EgtgpBZFXi6zAP27Cq"
+				"bzz-raw://09d40357d46abe05c8b6a36d071179196324a4ba24568f3366fffcdbb1207c02",
+				"dweb:/ipfs/QmQTikNzsLR9uBXWdGnHbJqruf5KncNH3thycqjgvSZEeA"
 			]
 		}
 	},

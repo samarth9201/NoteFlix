@@ -4,7 +4,7 @@ An Implementation of Decentralized music streaming application
 This is an implementation of decentralized music streaming application. This application can be used by users to buy music from the platform or upload music
 to the platform. This is a smart contract-based application where smart contracts control user registration, the flow of money, as well as flow of data.
 
-### Advantages of Decentralised Platforms over Centralised Platforms:
+### Advantages of Decentralized Platforms over Centralised Platforms:
 
 ##### 1. Control of Content :
 

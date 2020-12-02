@@ -17,7 +17,7 @@ Any user can access and pay for content which he wants to listen.
 ##### 2. Control of Monetization :
 
 These Centralized platforms also control the monetization of the content. The centralization of money always benefits the authorities in control of cash flow.
-These authorities use ad revenue from the content creator which makes up a major part of revenue. So, a content creator loses a major part of there revenue to these decentralised authorities.
+These authorities use ad revenue from the content creator which makes up a major part of revenue. So, a content creator loses a major part of there revenue to these centralized authorities.
 
 In Decentralized platforms, the user has complete control of money. Once, the user publishes the content, he has complete control over the funds received by his content. If a user's content has funds, he has control to withdraw these funds without middlemen.
 
@@ -42,7 +42,7 @@ Music.
 1. Clone the repo.
 
 ```
-> git clone https://github.com/samarth9201/music-stream-decentralized.git && cd music-stream-decentralised
+> git clone https://github.com/samarth9201/music-stream-decentralized.git && cd music-stream-decentralized
 ```
 2. Install the dependency.
 

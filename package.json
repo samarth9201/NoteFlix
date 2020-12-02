@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@openzeppelin/contracts": "^3.2.0",
-    "jsmediatags": "^3.9.3"
+    "@openzeppelin/contracts": "^3.2.0"
   }
 }

@@ -39,6 +39,11 @@ Music.
 
 ### Developing the application locally :
 
+0. Pre-requisites:
+    a. node : v12.x.x (prefrred)
+    b. yarn : v 1.22.0 (preferred over npm)
+    c. npm :  v 6.x.x
+
 1. Clone the repo.
 
 ```
@@ -49,11 +54,9 @@ Music.
     a. Using yarn :
     ```
     > yarn install
-    > cd src
-    > yarn install
     ```
     
-    b. Using npm :
+    b. Using npm : 
     ```
     > npm install
     > cd src

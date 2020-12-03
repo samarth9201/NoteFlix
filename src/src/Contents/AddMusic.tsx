@@ -58,12 +58,13 @@ const AddMusic = (props: AddMusicProps) => {
                 console.log("Hash is null")
             }
             else {
-                console.log(hash)
 
                 const account = await props.web3.eth.getAccounts()
                 await props.userContract.methods.addMusic(hash.path, musicName, priceInWei).send({
                     from: account[0]
                 })
+
+                alert("Music is being added to IPFS, it will be available in few minutes")
             }
         } catch (error) {
             alert(error.message)

@@ -229,6 +229,7 @@ const App = () => {
                 setDisplayName(Name)
 
                 alert("Successfully Connected to Wallet")
+                setSongData({name:"", artist: "", url: ""})
 
             }
 

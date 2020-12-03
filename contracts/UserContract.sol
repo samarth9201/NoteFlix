@@ -1,7 +1,6 @@
 pragma solidity >= 0.4.0 < 0.7.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
 import "./Factory.sol";
 import "./MusicContract.sol";
 
@@ -11,9 +10,7 @@ import "./MusicContract.sol";
  * @notice UserContract contains user data, his name, songs added by user and songs which the user bought.
  */
 contract UserContract is Ownable{
-    
-    using SafeMath for uint;
-    
+        
     string public name;
     Factory public factory;
     MusicContract[] myMusic;

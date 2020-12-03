@@ -207,10 +207,10 @@
 			]
 		},
 		"localhost/contracts/Factory.sol": {
-			"keccak256": "0xb7228a3c578dd5322ffc96ee9636d2e334d1a2da6e689dba2844f98280ff2721",
+			"keccak256": "0x312147056205e67779bdcd0d097ff006b2930dd860f4e634d4434e79764e19a5",
 			"urls": [
-				"bzz-raw://6f319d30b1ff5b4239d571e2cb4dd7ac9969ed66cff29f2310add50cb08d08db",
-				"dweb:/ipfs/QmWoVgSjFw6Hc1PQJLJEYGXbY7ymyV3DLk44MguwX3VDnc"
+				"bzz-raw://2a8e12a50ddef73cafbbe4ea6c15cc88ccce29c0eec484747abbd12884accedc",
+				"dweb:/ipfs/QmQVYzms3DBGzHQpCqiXATD1bNjYfACvsYick6G5bfR1Fc"
 			]
 		},
 		"localhost/contracts/MusicContract.sol": {

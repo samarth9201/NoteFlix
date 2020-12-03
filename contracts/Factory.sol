@@ -63,6 +63,7 @@ contract Factory{
      * @param _musicContract is instance of MusicContract which is to be added.
      */
     function addMusicToLibrary(MusicContract _musicContract) public{
+        require(UserContract(msg.sender) == users[_musicContract.owner()], "Invalid Function Call");
         musicLibrary.push(_musicContract);
     }
     

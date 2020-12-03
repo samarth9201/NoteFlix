@@ -67,7 +67,7 @@ const AddMusic = (props: AddMusicProps) => {
                 alert("Music is being added to IPFS, it will be available in few minutes")
             }
         } catch (error) {
-            alert(error.message)
+            alert("Please check if contracts are migrated or try connecting to wallet again")
         }
     }
     return (

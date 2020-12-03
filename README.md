@@ -47,11 +47,11 @@ Music.
     
         c. npm :  v 6.x.x
 
-1. Clone the repo.
+1. Clone the repository
 
-```
-> git clone https://github.com/samarth9201/music-stream-decentralized.git && cd music-stream-decentralized
-```
+  ```
+  > git clone https://github.com/samarth9201/music-stream-decentralized.git cd music-stream-decentralized
+  ```
 2. Install the dependency.
 
     a. Using yarn :

@@ -41,7 +41,7 @@ Music.
 
 0. Pre-requisites:
 
-        a. node : v12.x.x (prefrred)
+        a. node : v12.x.x (preferred)
     
         b. yarn : v 1.22.0 (preferred over npm)
     

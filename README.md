@@ -1,4 +1,4 @@
-# music-stream-decentralized
+# NoteFlix
 An Implementation of Decentralized music streaming application
 
 This is an implementation of decentralized music streaming application. This application can be used by users to buy music from the platform or upload music
